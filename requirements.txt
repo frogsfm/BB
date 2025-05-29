@@ -3,3 +3,4 @@ Flask-SQLAlchemy>=3.0
 SQLAlchemy>=2.0
 Werkzeug>=2.0
 gunicorn
+psycopg2
