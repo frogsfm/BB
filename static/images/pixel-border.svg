@@ -1,0 +1,19 @@
+<svg width="200" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20">
+  <defs>
+    <pattern id="borderPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="8" height="8" fill="#B3B3FF"/>
+      <rect x="8" y="8" width="8" height="8" fill="#FFB3B3"/>
+      <rect x="0" y="8" width="8" height="8" fill="#B3FFEC"/>
+      <rect x="8" y="0" width="8" height="8" fill="#FFE4B3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Decorative pixel border -->
+  <rect width="200" height="20" fill="url(#borderPattern)" opacity="0.8"/>
+  
+  <!-- Corner pixels -->
+  <rect x="0" y="0" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="196" y="0" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="0" y="16" width="4" height="4" fill="#FFFFFF"/>
+  <rect x="196" y="16" width="4" height="4" fill="#FFFFFF"/>
+</svg>

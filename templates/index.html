@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Messenger - Express Your Feelings</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>">
+</head>
+<body>
+    <!-- Intro Animation Overlay -->
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="intro-content">
+            <div class="pixel-logo">
+                <img src="{{ url_for('static', filename='images/pixel-heart.svg') }}" alt="Pixel Heart" class="pixel-heart-intro">
+                <h1 class="intro-title">PIXEL MESSENGER</h1>
+                <div class="loading-bar">
+                    <div class="loading-fill"></div>
+                </div>
+                <p class="intro-subtitle">Loading emotions...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen" style="display: none;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="pixel-card login-card">
+                        <div class="pixel-card-header text-center">
+                            <img src="{{ url_for('static', filename='images/pixel-heart.svg') }}" alt="Pixel Heart" class="pixel-heart-logo mb-3">
+                            <h2 class="card-title">PIXEL MESSENGER</h2>
+                        </div>
+                        <div class="pixel-card-body text-center">
+                            <p class="login-question mb-4">Are you the love of my life, Sanya?</p>
+                            <div class="login-options">
+                                <div class="form-check pixel-checkbox mb-3">
+                                    <input class="form-check-input" type="radio" name="loginChoice" id="yes-option" value="true">
+                                    <label class="form-check-label pixel-label" for="yes-option">
+                                        Yes 💖
+                                    </label>
+                                </div>
+                                <div class="form-check pixel-checkbox mb-4">
+                                    <input class="form-check-input" type="radio" name="loginChoice" id="no-option" value="false">
+                                    <label class="form-check-label pixel-label" for="no-option">
+                                        No 🐯
+                                    </label>
+                                </div>
+                                <button type="button" class="pixel-btn pixel-btn-primary" id="login-submit">
+                                    CONTINUE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Screen -->
+    <div id="password-screen" class="password-screen" style="display: none;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="pixel-card password-card">
+                        <div class="pixel-card-header text-center">
+                            <h2 class="card-title">ACCESS REQUIRED</h2>
+                        </div>
+                        <div class="pixel-card-body text-center">
+                            <p class="password-prompt mb-4">Then prove you're worthy. What's the password?</p>
+                            <div class="password-form">
+                                <div class="mb-4">
+                                    <input type="password" class="pixel-input" id="password-input" placeholder="Enter password..." maxlength="50">
+                                </div>
+                                <div class="button-group">
+                                    <button type="button" class="pixel-btn pixel-btn-secondary mb-2" id="back-btn">
+                                        BACK
+                                    </button>
+                                    <button type="button" class="pixel-btn pixel-btn-primary" id="password-submit">
+                                        SUBMIT
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="password-error" class="password-error" style="display: none;">
+                                <p class="error-message">Go back to where you belong, lobster kahiki 🦞</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application -->
+    <div id="main-app" class="main-app" style="display: none;">
+        <!-- Background Elements -->
+        <div class="pixel-bg-elements">
+            <div class="floating-pixel pixel-1"></div>
+            <div class="floating-pixel pixel-2"></div>
+            <div class="floating-pixel pixel-3"></div>
+            <div class="floating-pixel pixel-4"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="pixel-header text-center py-4">
+            <div class="container">
+                <img src="{{ url_for('static', filename='images/pixel-heart.svg') }}" alt="Pixel Heart" class="pixel-heart-logo">
+                <h1 class="pixel-title">PIXEL MESSENGER</h1>
+                <p class="pixel-subtitle">Express your feelings in 8-bit style</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <!-- Emotion Selector Card -->
+                    <div class="pixel-card emotion-card">
+                        <div class="pixel-card-header">
+                            <h2 class="card-title">How are you feeling?</h2>
+                        </div>
+                        <div class="pixel-card-body">
+                            <!-- Emotion Buttons -->
+                            <div class="emotion-selector">
+                                <button type="button" class="emotion-btn" data-emotion="angry" data-emoji="😠">
+                                    <span class="emotion-emoji">😠</span>
+                                    <span class="emotion-label">ANGRY</span>
+                                </button>
+                                <button type="button" class="emotion-btn" data-emotion="sad" data-emoji="😢">
+                                    <span class="emotion-emoji">😢</span>
+                                    <span class="emotion-label">SAD</span>
+                                </button>
+                                <button type="button" class="emotion-btn" data-emotion="miss" data-emoji="🥺">
+                                    <span class="emotion-emoji">🥺</span>
+                                    <span class="emotion-label">MISS HIM</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Form Card -->
+                    <div class="pixel-card message-card" id="message-card" style="display: none;">
+                        <div class="pixel-card-header">
+                            <h3 class="card-title">Share your message</h3>
+                        </div>
+                        <div class="pixel-card-body">
+                            <form id="message-form">
+                                <!-- Selected Emotion Display -->
+                                <div class="selected-emotion mb-4">
+                                    <span class="selected-emoji"></span>
+                                    <span class="selected-label"></span>
+                                </div>
+
+                                <!-- Message Templates -->
+                                <div class="message-templates mb-4">
+                                    <label class="pixel-label">Quick templates:</label>
+                                    <div class="template-buttons">
+                                        <!-- Templates will be populated by JavaScript -->
+                                    </div>
+                                </div>
+
+                                <!-- Message Input -->
+                                <div class="mb-4">
+                                    <label for="message" class="pixel-label">Your message (optional):</label>
+                                    <textarea id="message" name="message" class="pixel-textarea" rows="4" maxlength="300" placeholder="Type your message here..."></textarea>
+                                    <div class="character-counter">
+                                        <span id="char-count">0</span>/300 characters
+                                    </div>
+                                </div>
+
+
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="pixel-btn pixel-btn-primary" id="send-btn">
+                                    <img src="{{ url_for('static', filename='images/mail-icon.svg') }}" alt="Save" class="btn-icon">
+                                    <span class="btn-text">SAVE MESSAGE</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Success/Error Messages -->
+                    <div id="message-status" class="pixel-card status-card" style="display: none;">
+                        <div class="pixel-card-body text-center">
+                            <div class="status-content">
+                                <!-- Content will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="pixel-footer text-center py-4">
+            <div class="container">
+                <p class="mb-0">made with <span class="pixel-heart">❤️</span> by yours only</p>
+                <p class="mb-0" style="font-size: 8px; margin-top: 10px;">
+                    <a href="/admin" style="color: hsl(var(--text-dark)); text-decoration: none;">Admin Panel</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

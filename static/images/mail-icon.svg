@@ -1,0 +1,18 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .mail-pixel { fill: currentColor; }
+    </style>
+  </defs>
+  
+  <!-- Envelope base -->
+  <rect x="2" y="6" width="20" height="12" rx="1" ry="1" class="mail-pixel" fill="none" stroke="currentColor" stroke-width="2"/>
+  
+  <!-- Envelope flap -->
+  <path d="M2 6l10 6 10-6" class="mail-pixel" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Pixel details -->
+  <rect x="6" y="10" width="2" height="2" class="mail-pixel"/>
+  <rect x="16" y="10" width="2" height="2" class="mail-pixel"/>
+  <rect x="11" y="8" width="2" height="2" class="mail-pixel"/>
+</svg>

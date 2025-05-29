@@ -1,0 +1,27 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pixelGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="20" height="20" fill="#FFB3B3" opacity="0.1"/>
+      <rect x="0" y="0" width="19" height="19" fill="none" stroke="#B3FFEC" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    <linearGradient id="pixelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB3B3;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#B3FFEC;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FFE4B3;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#pixelGradient)"/>
+  <rect width="400" height="300" fill="url(#pixelGrid)"/>
+  
+  <!-- Pixel decorations -->
+  <rect x="50" y="50" width="8" height="8" fill="#B3B3FF"/>
+  <rect x="320" y="80" width="8" height="8" fill="#FFE4B3"/>
+  <rect x="150" y="200" width="8" height="8" fill="#B3FFEC"/>
+  <rect x="280" y="220" width="8" height="8" fill="#FFB3B3"/>
+  
+  <!-- Larger pixel blocks -->
+  <rect x="100" y="120" width="16" height="16" fill="#B3B3FF" opacity="0.6"/>
+  <rect x="250" y="150" width="16" height="16" fill="#FFB3B3" opacity="0.6"/>
+</svg>
