@@ -52,11 +52,10 @@ class PixelMessenger {
                 "Will you please come and eat me out 👅"
             ],
             confident: [
-        "I'm feeling unstoppable today! 😎",
-        "Confidence level: 100%.",
-        "I believe in myself and my abilities.",
-        "Ready to take on the world!",
-        "Nothing can bring me down right now."
+                "I'm feeling unstoppable today! 😎",
+                "Confidence level: 100%.",
+                "I believe in myself and my abilities.",
+                "Ready to take on the world!",
             ]
         };
         
