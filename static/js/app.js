@@ -27,6 +27,30 @@ class PixelMessenger {
                 "Can't stop thinking about you today.",
                 "Missing our time together so much."
             ]
+                    bored: [
+                "I'm so bored right now... 😐",
+                "Nothing exciting is happening today.",
+                "Wish there was something fun to do!",
+                "Just sitting here, bored out of my mind."
+            ],
+            happy: [
+                "Feeling super happy today! 😊",
+                "Everything just feels right!",
+                "Sending you positive vibes and smiles!",
+                "Life is good and I'm smiling."
+            ],
+            excited: [
+                "I'm so excited, I can't wait! 🤩",
+                "Something awesome is coming up!",
+                "My energy is through the roof right now!",
+                "Feeling pumped and ready for anything!"
+            ],
+            frisky: [
+                "Feeling a little frisky today... 😏",
+                "Got that playful mood going on!",
+                "Someone stop me before I flirt too much!",
+                "My mind is in the gutter, oops!"
+            ]
         };
         
         this.init();
