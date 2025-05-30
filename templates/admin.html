@@ -212,13 +212,23 @@
                 total: messages.length,
                 angry: messages.filter(m => m.emotion === 'angry').length,
                 sad: messages.filter(m => m.emotion === 'sad').length,
-                miss: messages.filter(m => m.emotion === 'miss').length
+                miss: messages.filter(m => m.emotion === 'miss').length,
+                bored: messages.filter(m => m.emotion === 'bored').length,
+                happy: messages.filter(m => m.emotion === 'happy').length,
+                excited: messages.filter(m => m.emotion === 'excited').length,
+                frisky: messages.filter(m => m.emotion === 'frisky').length,
+                confident: messages.filter(m => m.emotion === 'confident').length
             };
 
             document.getElementById('total-messages').textContent = stats.total;
             document.getElementById('angry-count').textContent = stats.angry;
             document.getElementById('sad-count').textContent = stats.sad;
             document.getElementById('miss-count').textContent = stats.miss;
+            document.getElementById('bored-count').textContent = stats.bored;
+            document.getElementById('happy-count').textContent = stats.happy;
+            document.getElementById('excited-count').textContent = stats.excited;
+            document.getElementById('frisky-count').textContent = stats.frisky;
+            document.getElementById('confident-count').textContent = stats.confident;
         }
 
         function exportMessages() {
