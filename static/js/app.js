@@ -46,10 +46,10 @@ class PixelMessenger {
                 "Feeling pumped and ready for anything!"
             ],
             frisky: [
-                "Feeling a little frisky today... 😏",
-                "Got that playful mood going on!",
-                "Someone stop me before I flirt too much!",
-                "My mind is in the gutter, oops!"
+                "Feeling a little touchy today... 😏",
+                "I wanna bend over for you 🥺",
+                "I want you to me fuck the shit out of me pleaseee!!",
+                "Will you please come and eat me out 👅"
             ]
         };
         
