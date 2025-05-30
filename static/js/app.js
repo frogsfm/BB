@@ -26,8 +26,8 @@ class PixelMessenger {
                 "Thinking about you and wishing you were here.",
                 "Can't stop thinking about you today.",
                 "Missing our time together so much."
-            ]
-                    bored: [
+            ],
+            bored: [
                 "I'm so bored right now... 😐",
                 "Nothing exciting is happening today.",
                 "Wish there was something fun to do!",
