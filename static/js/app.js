@@ -244,7 +244,7 @@ class PixelMessenger {
         const selectedEmoji = document.querySelector('.selected-emoji');
         const selectedLabel = document.querySelector('.selected-label');
         selectedEmoji.textContent = emoji;
-        selectedLabel.textContent = `Feeling ${label}`;
+        selectedLabel.textContent = `I am ${label}`;
 
         // Show message card with animation
         const messageCard = document.getElementById('message-card');
@@ -498,6 +498,6 @@ console.log(`
     ██║ ╚═╝ ██║███████╗███████║███████║███████╗██║ ╚████║╚██████╔╝███████╗██║  ██║
     ╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
     
-    Welcome to Pixel Messenger! 🎮
+    Welcome to Sanya's Journal ! 
     Express your emotions in 8-bit style.
 `);
