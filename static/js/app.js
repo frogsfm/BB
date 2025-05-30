@@ -50,6 +50,13 @@ class PixelMessenger {
                 "I wanna bend over for you 🥺",
                 "I want you to me fuck the shit out of me pleaseee!!",
                 "Will you please come and eat me out 👅"
+            ],
+            confident: [
+        "I'm feeling unstoppable today! 😎",
+        "Confidence level: 100%.",
+        "I believe in myself and my abilities.",
+        "Ready to take on the world!",
+        "Nothing can bring me down right now."
             ]
         };
         
